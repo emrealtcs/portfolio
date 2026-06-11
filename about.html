@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About me — biography, education, skills, and contact information."
+    />
+    <title>About | Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/about.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation"></nav>
+    </header>
+
+    <main id="main-content">
+      <section class="about-hero" aria-labelledby="about-heading">
+        <div class="container about-layout">
+          <div class="profile-image-wrap">
+            <img
+              class="profile-image"
+              src="assets/images/profile/pic.png"
+              alt="Profile photo of Your Name"
+              width="280"
+              height="280"
+            />
+          </div>
+          <div class="about-intro">
+            <h1 id="about-heading">Emre Altman</h1>
+            <p class="about-role">Data Analyst</p>
+            <p>
+              As an aspiring Data Analyst, I enjoy exploring data to uncover patterns.
+              My experience includes data visualization, database design, machine learning, 
+              and analytical problem-solving. I'm currently seeking an entry-level 
+              analytics role.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container about-content">
+        <section class="about-block" aria-labelledby="bio-heading">
+          <h2 id="bio-heading">Biography</h2>
+          <p>
+            I studied computer science at Georgia Institute of Technology and have worked on projects spanning web
+            applications, databases, and data visualization.
+          </p>
+          <p>
+            Outside of coding, I like reading (Brandon Sanderson is the goat), running, lifting, hiking, 
+            and playing video games.
+          </p>
+        </section>
+
+        <section class="about-block" aria-labelledby="education-heading">
+          <h2 id="education-heading">Education</h2>
+          <ul class="education-list">
+            <li>
+              <strong>B.S. Computer Science</strong>
+              <span>Georgia Institute of Technology</span>
+            </li>
+            <li>
+              <strong>Relevant coursework</strong>
+              <span>
+                Data Structures, Algorithms, Databases, Mobile & Ubiquitous Computing, 
+                Computer Graphics.
+              </span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="about-block" aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3>Languages</h3>
+              <ul>
+                <li>Java</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h3>Frontend</h3>
+              <ul>
+                <li>HTML &amp; CSS</li>
+                <li>Responsive design</li>
+                <li>Accessibility (WCAG basics)</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h3>Backend &amp; Data</h3>
+              <ul>
+                <li>REST APIs</li>
+                <li>PostgreSQL</li>
+                <li>Git &amp; GitHub</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h3>Tools</h3>
+              <ul>
+                <li>VS Code / Cursor</li>
+                <li>Linux &amp; shell</li>
+                <li>Jupyter, RStudio</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-block" aria-labelledby="contact-heading">
+          <h2 id="contact-heading">Contact</h2>
+          <ul class="contact-links">
+            <li>
+              <a
+                href="https://github.com/emrealtcs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub — github.com/emrealtcs
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/emre-altman/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn — linkedin.com/in/emre-altman/
+              </a>
+            </li>
+            <li>
+              <a href="mailto:emrealtcs@gmail.com">Email —emrealtcs@gmail.com</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer" id="site-footer"></footer>
+
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        renderNavigation('about');
+        renderFooter('about');
+      });
+    </script>
+  </body>
+</html>

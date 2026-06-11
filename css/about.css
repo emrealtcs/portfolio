@@ -1,0 +1,126 @@
+/* ==========================================================================
+   About page — profile, bio, education, skills, contact
+   ========================================================================== */
+
+.about-hero {
+  padding-block: var(--space-10);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.profile-image-wrap {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.about-intro h1 {
+  margin-bottom: var(--space-2);
+}
+
+.about-role {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+}
+
+.about-content {
+  padding-block: var(--space-10);
+}
+
+.about-block {
+  margin-bottom: var(--space-10);
+}
+
+.about-block h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.education-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.education-list li {
+  margin-bottom: var(--space-5);
+  padding-left: var(--space-4);
+  border-left: 3px solid var(--color-border);
+}
+
+.education-list strong {
+  display: block;
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.education-list span {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-5);
+}
+
+.skill-category h3 {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--space-3);
+  color: var(--color-text);
+}
+
+.skill-category ul {
+  margin: 0;
+  padding-left: var(--space-5);
+  color: var(--color-text-muted);
+}
+
+.contact-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.contact-links a {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .about-intro {
+    text-align: center;
+  }
+
+  .education-list li {
+    text-align: left;
+  }
+}
