@@ -62,28 +62,33 @@ function renderProjectMedia(project) {
   const container = document.getElementById('project-media');
   if (!container) return;
 
+  const imageSrc = resolveAssetPath(project.image, 'project');
+
   if (project.videoUrl) {
     container.innerHTML = `
-      <video
-        class="project-hero-video"
-        controls
-        preload="metadata"
-        poster="${escapeHtml(project.image)}"
-        aria-label="${escapeHtml(project.title)} demonstration video"
+      <a
+        href="${project.videoUrl}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="project-video-link"
+        aria-label="Watch ${escapeHtml(project.title)} demo on YouTube"
       >
-        <source src="${escapeHtml(project.videoUrl)}" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    `;
-  } else {
-    container.innerHTML = `
-      <img
-        class="project-hero-image"
-        src="${escapeHtml(project.image)}"
-        alt="${escapeHtml(project.title)}"
-        width="1200"
-        height="675"
-      />
+        <img
+          class="project-hero-image"
+          src="${escapeHtml(imageSrc)}"
+          alt="${escapeHtml(project.title)} demo thumbnail"
+          width="1200"
+          height="675"
+        />
+  
+        <div class="play-button-overlay">
+          ▶
+        </div>
+  
+        <div class="video-label">
+          Watch Demo on YouTube
+        </div>
+      </a>
     `;
   }
 }

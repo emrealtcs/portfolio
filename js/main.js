@@ -98,3 +98,17 @@ function renderTechTags(technologies) {
     .map((tech) => `<li class="tag">${escapeHtml(tech)}</li>`)
     .join('');
 }
+
+/**
+ * Resolves asset paths relative to the site root for nested pages.
+ * Project pages live in /projects/, so they need a "../" prefix.
+ * @param {string} path
+ * @param {'home'|'about'|'project'} pageContext
+ * @returns {string}
+ */
+function resolveAssetPath(path, pageContext) {
+  if (!path || /^https?:\/\//i.test(path) || path.startsWith('/')) {
+    return path;
+  }
+  return pageContext === 'project' ? `../${path}` : path;
+}

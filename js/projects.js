@@ -6,10 +6,11 @@ const PROJECTS = [
   {
     id: 'marvel-rivals-analytics',
     slug: 'marvel-rivals-analytics',
+    inDevelopment: true,
     title: 'Marvel Rivals Analytics',
     description:
-      'A data dashboard tracking player stats, match outcomes, and hero performance trends for Marvel Rivals.',
-    technologies: ['Python', 'Pandas', 'Plotly', 'SQLite', 'HTML/CSS'],
+      ' ',
+    technologies: [''],
     image: 'assets/images/projects/marvel-rivals-analytics.png',
     demoUrl: 'https://example.com/marvel-rivals-demo',
     videoUrl: null,
@@ -35,7 +36,7 @@ const PROJECTS = [
     technologies: ['Java', 'JavaScript', 'React', 'Spring Boot', 'Supabase', 'Vercel'],
     image: 'assets/images/projects/connections-word-game.png',
     demoUrl: 'https://connections-jk4e.vercel.app/',
-    videoUrl:'assets/videos/connectionsvid.mp4',
+    videoUrl: 'https://youtu.be/TJVDA_2iA8w?si=_dRE1GXvf1boHjyu',
     overview:
       'Make 4 categories out of related words! Create your own puzzle and share it with your friends.',
     problemStatement:
@@ -79,8 +80,8 @@ const PROJECTS = [
       'Exploratory analysis of international housing prices, affordability indices, and regional trends over time.',
     technologies: ['Python', 'PostgreSQL', 'pandas', 'Jupyter', 'scikit-learn'],
     image: 'assets/images/projects/global-housing-market.png',
-    demoUrl: 'https://example.com/housing-analysis-demo',
-    videoUrl: null,
+    demoUrl: 'https://github.com/emrealtcs/global_housing_market_analysis',
+    videoUrl: 'https://youtu.be/4VlvOIZf8cY?si=vf6ChMMwiA0Bf2ru',
     overview:
       'A research-style project comparing housing metrics across countries using public datasets, tested and trained with scikit-learn using target encoding, time series analysis, and clustering.',
     problemStatement:
@@ -102,7 +103,7 @@ const PROJECTS = [
       'A review of users Spotify listening history: top artists, genres, and listening minutes',
     technologies: ['Android', 'Java', 'Spotify API', 'Firebase'],
     image: 'assets/images/projects/spotify-wrapped-clone.png',
-    demoUrl: 'https://example.com/wrapped-demo',
+    demoUrl: 'https://github.com/emrealtcs/Echo-Fusion-Spotify',
     videoUrl: null,
     overview:
       'A Spotify Wrapped–style mobile application that walks users through personalized listening highlights.',

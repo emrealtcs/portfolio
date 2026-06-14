@@ -19,11 +19,11 @@ function renderProjectGrid() {
     ''
   );
 
-  grid.querySelectorAll('.project-card-link').forEach((card) => {
-    card.addEventListener('keydown', (e) => {
+  grid.querySelectorAll('.project-card-link').forEach((link) => {
+    link.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        card.click();
+        link.click();
       }
     });
   });
@@ -35,26 +35,43 @@ function renderProjectGrid() {
  * @returns {string}
  */
 function createProjectCard(project) {
-  const href = `projects/${project.slug}.html`;
   const tags = renderTechTags(project.technologies);
+  const imageSrc = resolveAssetPath(project.image, 'home');
+  const inDevelopment = project.inDevelopment === true;
 
+  const cardBody = `
+    <div class="project-card-image">
+      <img
+        src="${escapeHtml(imageSrc)}"
+        alt="${escapeHtml(project.title)} project thumbnail"
+        width="640"
+        height="360"
+        loading="lazy"
+      />
+    </div>
+    <div class="project-card-body">
+      <h3 class="project-card-title">${escapeHtml(project.title)}</h3>
+      <p class="project-card-desc">${escapeHtml(project.description)}</p>
+      <ul class="tag-list" aria-label="Technologies">${tags}</ul>
+      ${inDevelopment ? '<p class="project-card-status">In development</p>' : ''}
+    </div>
+  `;
+
+  if (inDevelopment) {
+    return `
+      <li class="project-card project-card--in-development">
+        <div class="project-card-content" aria-label="${escapeHtml(project.title)} — in development">
+          ${cardBody}
+        </div>
+      </li>
+    `;
+  }
+
+  const href = `projects/${project.slug}.html`;
   return `
     <li class="project-card">
       <a class="project-card-link" href="${href}" aria-label="View ${escapeHtml(project.title)}">
-        <div class="project-card-image">
-          <img
-            src="${escapeHtml(project.image)}"
-            alt="${escapeHtml(project.title)} project thumbnail"
-            width="640"
-            height="360"
-            loading="lazy"
-          />
-        </div>
-        <div class="project-card-body">
-          <h3 class="project-card-title">${escapeHtml(project.title)}</h3>
-          <p class="project-card-desc">${escapeHtml(project.description)}</p>
-          <ul class="tag-list" aria-label="Technologies">${tags}</ul>
-        </div>
+        ${cardBody}
       </a>
     </li>
   `;
