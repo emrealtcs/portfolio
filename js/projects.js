@@ -59,7 +59,7 @@ const PROJECTS = [
     technologies: ['MySQL', 'ER Diagrams'],
     image: 'assets/images/projects/music-streaming-database.png',
     demoUrl: 'https://example.com/music-db-demo',
-    videoUrl: null,
+    videoUrl: 'https://youtu.be/FV87gJjbVhI',
     overview:
       'End-to-end database project for a music streaming platform, covering schema design, normalization, and analytical queries, and more.',
     problemStatement:
